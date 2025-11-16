@@ -147,8 +147,8 @@
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/Parvptl/ecommerce-analytics-nexus.git
-cd ecommerce-analytics-nexus
+git clone https://github.com/Parvptl/nexus-dashboard.git
+cd nexus-dashboard
 ```
 
 2. **Create virtual environment** (recommended)
@@ -164,12 +164,17 @@ pip install -r requirements.txt
 
 4. **Run the application**
 ```bash
-streamlit run main_dashboard.py
+# Option 1: Using Streamlit directly
+streamlit run app/main_dashboard.py
+
+# Option 2: Using the launch script
+chmod +x run.sh
+./run.sh
 ```
 
 5. **Access the dashboard**
 - Open browser at `http://localhost:8501`
-- Upload your CSV files or use sample data
+- Upload your CSV files or use sample data from `data/` folder
 
 ---
 
@@ -248,32 +253,47 @@ INT001, 2024-01-16, 3, 2499, Set, ...
 ## 📁 Project Structure
 
 ```
-ecommerce-analytics-nexus/
+nexus-dashboard/
 │
-├── main_dashboard.py          # Main Streamlit application
-├── requirements.txt           # Python dependencies
-├── README.md                  # This file
-│
-├── app/
+├── app/                              # MAIN APPLICATION PACKAGE
 │   ├── __init__.py
-│   ├── components/
-│   │   └── sidebar.py         # Sidebar UI component
+│   ├── main_dashboard.py             # Core Streamlit app (imports all modules)
 │   │
-│   └── modules/
-│       ├── __init__.py
-│       ├── data_processing.py      # ETL pipeline
-│       ├── visualization.py        # Charts & graphs
-│       ├── statistical_inference.py # Statistical tests
-│       ├── association_rules.py    # Market basket analysis
-│       ├── clustering.py           # ML clustering
-│       └── network_visualization.py # Network graphs
+│   ├── modules/                      # ANALYTICS MODULES (ETL, ML, Stats)
+│   │   ├── __init__.py
+│   │   ├── data_processing.py        # ETL pipeline & data cleaning
+│   │   ├── visualization.py          # Charts & interactive graphs
+│   │   ├── statistical_inference.py  # Hypothesis testing (t-tests, ANOVA, Chi-square)
+│   │   ├── association_rules.py      # Market basket analysis (Apriori)
+│   │   ├── clustering.py             # K-Means, Hierarchical, DBSCAN
+│   │   └── network_visualization.py  # PyVis network graphs
+│   │
+│   ├── components/                   # UI COMPONENTS (layouts & widgets)
+│   │   ├── sidebar.py                # File upload & navigation sidebar
+│   │   ├── home_kpis.py              # Homepage KPI cards
+│   │   └── styles.py                 # Custom CSS styling
+│   │
+│   ├── utils/                        # HELPER FUNCTIONS
+│   │   ├── file_loader.py            # CSV loading utilities
+│   │   ├── caching.py                # Data caching for performance
+│   │   ├── date_utils.py             # Date parsing helpers
+│   │   └── constants.py              # App-wide constants
+│   │
+│   └── assets/                       # STATIC FILES
+│       ├── nexus_logo.png            # Dashboard logo
+│       └── custom.css                # Additional styling
 │
-├── data/                      # Sample data directory
-│   ├── Amazon Sale Report.csv
-│   └── International sale Report.csv
+├── data/                             # RAW DATASETS
+│   ├── Amazon Sale Report.csv        # Domestic sales data
+│   └── International sale Report.csv # International sales data
 │
-└── docs/                      # Documentation
-    └── user_guide.md
+├── tests/                            # AUTOMATED TESTS (optional)
+│   └── test_etl.py                   # Unit tests for ETL pipeline
+│
+├── requirements.txt                  # Python dependencies
+├── .gitignore                        # Git ignore rules
+├── run.sh                            # Launch script
+└── README.md                         # This file
 ```
 
 ---
@@ -310,7 +330,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white)](https://github.com/Parvptl)
 [![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:parv4careers@gmail.com)
 
-**Project Link:** [https://github.com/Parvptl/ecommerce-analytics-nexus](https://github.com/Parvptl/ecommerce-analytics-nexus)
+**Project Link:** [https://github.com/Parvptl/nexus-dashboard](https://github.com/Parvptl/nexus-dashboard)
 
 ---
 
