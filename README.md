@@ -234,17 +234,6 @@ INT001, 2024-01-16, 3, 2499, Set, ...
 
 ## 🎬 Demo
 
-### Screenshots
-
-**Home Dashboard:**
-![Home Dashboard](https://via.placeholder.com/800x400?text=Home+Dashboard)
-
-**Market Basket Analysis:**
-![Market Basket](https://via.placeholder.com/800x400?text=Market+Basket+Analysis)
-
-**Clustering Visualization:**
-![Clustering](https://via.placeholder.com/800x400?text=Clustering+Dashboard)
-
 ### Live Demo
 🔗 **[Try the live application](https://ecommerce-analytics-nexus.streamlit.app/)**
 
