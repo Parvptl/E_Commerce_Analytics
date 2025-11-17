@@ -4,136 +4,109 @@
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-> **A comprehensive end-to-end analytics platform for e-commerce business intelligence, featuring ETL pipelines, statistical inference, machine learning, and interactive visualizations.**
+> **A comprehensive analytics platform for e-commerce business intelligence, featuring ETL pipelines, statistical inference, machine learning, and interactive visualizations.**
 
 ---
 
 ## 📋 Table of Contents
 
 - [Overview](#-overview)
+- [Live Demo](#-live-demo)
 - [Key Features](#-key-features)
 - [Technology Stack](#-technology-stack)
-- [Architecture](#-architecture)
 - [Installation](#-installation)
 - [Usage](#-usage)
-- [Modules](#-modules)
-- [Demo](#-demo)
 - [Project Structure](#-project-structure)
-- [Contributing](#-contributing)
-- [License](#-license)
+- [Modules Overview](#-modules-overview)
+- [Data Format](#-data-format)
+- [Screenshots](#-screenshots)
 - [Contact](#-contact)
 
 ---
 
 ## 🌟 Overview
 
-**NEXUS** is a production-ready analytics dashboard built to analyze e-commerce sales data across **Domestic** and **International** channels. It processes 100K+ transactions, performs advanced statistical analysis, discovers product associations using the **Apriori algorithm**, and segments customers through **clustering** techniques.
-
-**Live Demo:** [https://ecommerce-analytics-nexus.streamlit.app/](https://ecommerce-analytics-nexus.streamlit.app/)
+**NEXUS** is a production-ready analytics dashboard designed to analyze e-commerce sales data across **Domestic** and **International** channels. The platform processes 100,000+ transactions and provides actionable insights through advanced statistical analysis, machine learning algorithms, and interactive visualizations.
 
 ### Business Value
 - ✅ **80% reduction** in manual analysis time
-- ✅ Real-time actionable insights for sales teams
+- ✅ Real-time actionable insights for decision-making
 - ✅ Data-driven cross-selling recommendations
 - ✅ Customer segmentation for targeted marketing
 - ✅ Geographic performance tracking
 
 ---
 
+## 🚀 Live Demo
+
+**Try it now:** [https://ecommerce-analytics-nexus.streamlit.app/](https://ecommerce-analytics-nexus.streamlit.app/)
+
+---
+
 ## ✨ Key Features
 
-### 📊 **1. ETL & Data Processing**
+### 📊 ETL & Data Processing
 - Automated data cleaning and transformation
-- Handle missing values and outliers
+- Missing value handling and outlier detection
 - Feature engineering (temporal features, AOV, revenue metrics)
 - Support for multiple data sources (Domestic & International)
+- Data quality reports with completeness metrics
 
-### 📈 **2. Visual Analytics**
+### 📈 Visual Analytics
 - Revenue trend analysis (Daily/Weekly/Monthly)
 - Category performance dashboards
-- Geographic heatmaps
-- Distribution analysis
+- Geographic heatmaps and state-wise analysis
+- Distribution analysis with statistical overlays
 - Correlation matrices
 - Advanced visualizations (Sunburst, Treemap, Violin plots)
 
-### 🔬 **3. Statistical Inference**
+### 🔬 Statistical Inference
 - **t-Tests** for channel comparison
-- **Chi-Square** tests for independence
+- **Chi-Square** tests for categorical independence
 - **ANOVA** for multi-group analysis
 - **Correlation analysis** with significance testing
 - Effect size calculations (Cohen's d)
+- Hypothesis testing with business interpretations
 
-### 🛒 **4. Market Basket Analysis**
+### 🛒 Market Basket Analysis
 - **Apriori algorithm** for frequent itemset mining
 - Association rule generation (Support, Confidence, Lift)
 - Interactive parameter tuning
 - Business recommendations engine
-- Top rule visualization
+- Cross-selling opportunity identification
 
-### 🎯 **5. Customer Segmentation**
+### 🎯 Customer Segmentation
 - **K-Means Clustering** with elbow method
 - **Hierarchical Clustering** with dendrograms
 - **DBSCAN** for density-based clustering
 - **PCA** for dimensionality reduction
 - Cluster profiling and interpretation
 
-### 🌐 **6. Network Visualization**
+### 🌐 Network Visualization
 - Interactive **PyVis** network graphs
 - Product association mapping
-- Rule strength visualization
-- Dynamic node/edge styling
+- Rule strength visualization with edge weights
+- Dynamic hover tooltips with metrics
 
 ---
 
 ## 🛠️ Technology Stack
 
-### **Core Technologies**
-- **Python 3.8+**
-- **Streamlit** - Web application framework
-- **Pandas** - Data manipulation and analysis
-- **NumPy** - Numerical computing
+### Core
+- **Python 3.8+** - Programming language
+- **Streamlit 1.18+** - Web framework
+- **Pandas 1.3+** - Data manipulation
+- **NumPy 1.21+** - Numerical computing
 
-### **Data Science & ML**
-- **Scikit-learn** - Machine learning (K-Means, DBSCAN, PCA)
-- **SciPy** - Statistical tests (t-test, Chi-square, ANOVA)
-- **MLxtend** - Association rule mining (Apriori)
+### Data Science & ML
+- **Scikit-learn 1.0+** - Machine learning algorithms
+- **SciPy 1.7+** - Statistical tests
+- **MLxtend 0.19+** - Association rule mining
 
-### **Visualization**
-- **Plotly** - Interactive charts and graphs
-- **PyVis** - Network graph visualization
-- **Matplotlib/Seaborn** - Statistical plots
-
----
-
-## 🏗️ Architecture
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                     Data Sources                            │
-│         (Domestic CSV + International CSV)                  │
-└────────────────────┬────────────────────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────────────┐
-│                  ETL Pipeline                               │
-│  • Data Cleaning  • Feature Engineering  • Validation       │
-└────────────────────┬────────────────────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────────────┐
-│                  Analytics Modules                          │
-│                                                             │
-│  📊 Visual Analytics    🔬 Statistical Tests               │
-│  🛒 Market Basket       🎯 Clustering                      │
-│  🌐 Network Graph       📋 Reporting                       │
-└────────────────────┬────────────────────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────────────┐
-│            Streamlit Web Interface                          │
-│         (Interactive Dashboard + Exports)                   │
-└─────────────────────────────────────────────────────────────┘
-```
+### Visualization
+- **Plotly 5.6+** - Interactive charts
+- **PyVis 0.3.2+** - Network graphs
+- **Matplotlib 3.5+** & **Seaborn 0.12+** - Statistical plots
 
 ---
 
@@ -145,97 +118,54 @@
 
 ### Quick Start
 
-1. **Clone the repository**
 ```bash
+# 1. Clone repository
 git clone https://github.com/Parvptl/nexus-dashboard.git
 cd nexus-dashboard
-```
 
-2. **Create virtual environment** (recommended)
-```bash
+# 2. Create virtual environment
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
 
-3. **Install dependencies**
-```bash
+# 3. Install dependencies
 pip install -r requirements.txt
-```
 
-4. **Run the application**
-```bash
-# Option 1: Using Streamlit directly
+# 4. Run application
 streamlit run app/main_dashboard.py
 
-# Option 2: Using the launch script
-chmod +x run.sh
-./run.sh
+# 5. Open browser at http://localhost:8501
 ```
-
-5. **Access the dashboard**
-- Open browser at `http://localhost:8501`
-- Upload your CSV files or use sample data from `data/` folder
 
 ---
 
 ## 📖 Usage
 
-### Data Format Requirements
-
-**Domestic Sales CSV:**
-```
-Order ID, Date, Status, Category, Qty, Amount, ship-state, ...
-DOM001, 2024-01-15, Shipped, Set, 2, 1299, Maharashtra, ...
+### Step 1: Launch Application
+```bash
+streamlit run app/main_dashboard.py
 ```
 
-**International Sales CSV:**
-```
-Order number, Date, PCS, GROSS AMT, Category, ...
-INT001, 2024-01-16, 3, 2499, Set, ...
-```
+### Step 2: Upload Data
+1. Use the sidebar to upload CSV files:
+   - **Domestic CSV**: Amazon Sale Report
+   - **International CSV**: International Sale Report
+2. Click **"Load/Reload Data"** button
+3. Wait for data processing (5-30 seconds)
 
-### Running Analysis
+### Step 3: Explore Analytics
+Navigate through 6 modules using the dropdown menu:
+1. **🏠 Home** - Executive summary and KPIs
+2. **📊 ETL & Processing** - Data quality reports
+3. **📈 Visual Analytics** - Charts and trends
+4. **🔬 Statistical Tests** - Hypothesis testing
+5. **🛒 Market Basket** - Association rules
+6. **🎯 Clustering** - Customer segmentation
+7. **🌐 Network Graph** - Product associations
 
-1. **Upload Data**: Use sidebar to upload CSV files
-2. **Navigate Modules**: Select analysis type from dropdown
-3. **Configure Parameters**: Adjust sliders/inputs for your analysis
-4. **Generate Insights**: Click analysis buttons to run computations
-5. **Export Results**: Download processed data and reports
-
----
-
-## 📦 Modules
-
-### 1️⃣ ETL & Data Processing
-- **File:** `app/modules/data_processing.py`
-- **Features:** Data cleaning, validation, feature engineering, quality reports
-
-### 2️⃣ Visual Analytics
-- **File:** `app/modules/visualization.py`
-- **Features:** Revenue trends, category analysis, geographic insights, distributions
-
-### 3️⃣ Statistical Inference
-- **File:** `app/modules/statistical_inference.py`
-- **Features:** Hypothesis testing, correlation analysis, effect size calculations
-
-### 4️⃣ Market Basket Analysis
-- **File:** `app/modules/association_rules.py`
-- **Features:** Apriori algorithm, rule generation, business recommendations
-
-### 5️⃣ Clustering & Segmentation
-- **File:** `app/modules/clustering.py`
-- **Features:** K-Means, Hierarchical, DBSCAN, PCA visualization
-
-### 6️⃣ Network Visualization
-- **File:** `app/modules/network_visualization.py`
-- **Features:** Interactive graphs, association mapping, PyVis integration
-
----
-
-## 🎬 Demo
-
-### Live Demo
-🔗 **[Try the live application](https://ecommerce-analytics-nexus.streamlit.app/)**
+### Step 4: Export Results
+- Download processed data (CSV)
+- Export analysis results
+- Save visualizations
 
 ---
 
@@ -244,72 +174,233 @@ INT001, 2024-01-16, 3, 2499, Set, ...
 ```
 nexus-dashboard/
 │
-├── app/                              # MAIN APPLICATION PACKAGE
+├── app/                              # Main application package
 │   ├── __init__.py
-│   ├── main_dashboard.py             # Core Streamlit app (imports all modules)
+│   ├── main_dashboard.py             # Core Streamlit app
 │   │
-│   ├── modules/                      # ANALYTICS MODULES (ETL, ML, Stats)
+│   ├── modules/                      # Analytics modules
 │   │   ├── __init__.py
-│   │   ├── data_processing.py        # ETL pipeline & data cleaning
-│   │   ├── visualization.py          # Charts & interactive graphs
-│   │   ├── statistical_inference.py  # Hypothesis testing (t-tests, ANOVA, Chi-square)
-│   │   ├── association_rules.py      # Market basket analysis (Apriori)
-│   │   ├── clustering.py             # K-Means, Hierarchical, DBSCAN
+│   │   ├── data_processing.py        # ETL pipeline
+│   │   ├── visualization.py          # Interactive charts
+│   │   ├── statistical_inference.py  # Hypothesis testing
+│   │   ├── association_rules.py      # Market basket analysis
+│   │   ├── clustering.py             # K-Means, DBSCAN, Hierarchical
 │   │   └── network_visualization.py  # PyVis network graphs
 │   │
-│   ├── components/                   # UI COMPONENTS (layouts & widgets)
-│   │   ├── sidebar.py                # File upload & navigation sidebar
+│   ├── components/                   # UI components
+│   │   ├── sidebar.py                # Navigation sidebar
 │   │   ├── home_kpis.py              # Homepage KPI cards
-│   │   └── styles.py                 # Custom CSS styling
+│   │   └── styles.py                 # Custom CSS
 │   │
-│   ├── utils/                        # HELPER FUNCTIONS
+│   ├── utils/                        # Helper functions
 │   │   ├── file_loader.py            # CSV loading utilities
-│   │   ├── caching.py                # Data caching for performance
-│   │   ├── date_utils.py             # Date parsing helpers
-│   │   └── constants.py              # App-wide constants
+│   │   ├── caching.py                # Data caching
+│   │   ├── date_utils.py             # Date parsing
+│   │   └── constants.py              # Constants
 │   │
-│   └── assets/                       # STATIC FILES
+│   └── assets/                       # Static files
 │       ├── nexus_logo.png            # Dashboard logo
 │       └── custom.css                # Additional styling
 │
-├── data/                             # RAW DATASETS
-│   ├── Amazon Sale Report.csv        # Domestic sales data
-│   └── International sale Report.csv # International sales data
+├── data/                             # Raw datasets
+│   ├── Amazon Sale Report.csv        # Domestic sales
+│   └── International sale Report.csv # International sales
 │
-├── tests/                            # AUTOMATED TESTS (optional)
-│   └── test_etl.py                   # Unit tests for ETL pipeline
+├── tests/                            # Unit tests
+│   └── test_etl.py                   # ETL pipeline tests
 │
 ├── requirements.txt                  # Python dependencies
 ├── .gitignore                        # Git ignore rules
 ├── run.sh                            # Launch script
-└── README.md                         # This file
+└── README.md                         # Documentation
 ```
 
 ---
 
-## 🤝 Contributing
+## 📚 Modules Overview
 
-Contributions are welcome! Please follow these steps:
+### 1. ETL & Data Processing
+**File:** `app/modules/data_processing.py`
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+**Features:**
+- Clean and standardize domestic and international data
+- Handle missing values and outliers
+- Generate temporal features (year, month, weekday)
+- Calculate business metrics (AOV, revenue per unit)
+- Validate data quality
 
-### Development Guidelines
-- Follow PEP 8 style guide
-- Add docstrings to all functions
-- Include unit tests for new features
-- Update documentation as needed
+**Key Functions:**
+- `clean_domestic_data(df)` - Clean domestic sales data
+- `clean_international_data(df)` - Clean international sales data
+- `engineer_features(df)` - Create derived features
+- `process_data(dom_df, int_df)` - Full ETL pipeline
+
+---
+
+### 2. Visual Analytics
+**File:** `app/modules/visualization.py`
+
+**Features:**
+- Revenue trends with time aggregation options
+- Category performance analysis
+- Geographic insights (state-wise)
+- Distribution analysis with histograms
+- Correlation heatmaps
+- Sunburst, Treemap, and Violin plots
+
+**Use Cases:**
+- Identify seasonal trends
+- Compare channel performance
+- Spot geographic opportunities
 
 ---
 
-## 📄 License
+### 3. Statistical Inference
+**File:** `app/modules/statistical_inference.py`
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+**Features:**
+- **Independent t-test**: Compare two groups (e.g., Domestic vs International)
+- **Chi-square test**: Test independence of categorical variables
+- **ANOVA**: Compare means across 3+ groups
+- **Correlation analysis**: Measure linear relationships
+
+**Output:**
+- Test statistics (t-stat, χ², F-stat)
+- p-values with interpretations
+- Effect sizes (Cohen's d)
+- Business recommendations
 
 ---
+
+### 4. Market Basket Analysis
+**File:** `app/modules/association_rules.py`
+
+**Features:**
+- Apriori algorithm for frequent itemsets
+- Generate association rules
+- Interactive parameter tuning (support, confidence, lift)
+- Visualize rule strength
+- Business recommendations for cross-selling
+
+**Metrics:**
+- **Support**: Frequency of itemset (e.g., 5% of transactions)
+- **Confidence**: Probability of consequent given antecedent (e.g., 80%)
+- **Lift**: Association strength vs. random (e.g., 2.5x more likely)
+
+---
+
+### 5. Clustering & Segmentation
+**File:** `app/modules/clustering.py`
+
+**Features:**
+- **K-Means**: Partition data into K clusters
+- **Hierarchical**: Build cluster dendrograms
+- **DBSCAN**: Density-based clustering with outlier detection
+- **PCA**: Visualize high-dimensional data in 2D
+
+**Clustering Levels:**
+- Category-level aggregation
+- State-level aggregation
+- Transaction-level sampling
+
+---
+
+### 6. Network Visualization
+**File:** `app/modules/network_visualization.py`
+
+**Features:**
+- Interactive PyVis network graphs
+- Visualize product associations
+- Edge thickness proportional to lift
+- Hover tooltips with rule metrics
+- Zoom, pan, and drag interactions
+
+**Business Use:**
+- Identify product communities
+- Visualize cross-selling opportunities
+- Present findings to stakeholders
+
+---
+
+## 📋 Data Format
+
+### Domestic Sales CSV
+
+**Required Columns:**
+```
+Order ID, Date, Amount, Category, Qty, ship-state
+```
+
+**Example:**
+```csv
+Order ID,Date,Status,Category,Qty,Amount,ship-state
+DOM001,2024-01-15,Shipped,Electronics,2,1299,Maharashtra
+DOM002,2024-01-16,Delivered,Fashion,1,899,Delhi
+```
+
+**Optional Columns:** Status, Fulfilment, Sales Channel, Size, Courier Status
+
+---
+
+### International Sales CSV
+
+**Required Columns:**
+```
+Order number, Date, GROSS AMT, Category, PCS
+```
+
+**Example:**
+```csv
+Order number,Date,PCS,GROSS AMT,Category
+INT001,2024-01-16,3,2499,Electronics
+INT002,2024-01-17,1,1899,Home & Kitchen
+```
+
+**Optional Columns:** Status, Currency
+
+---
+
+## 📸 Screenshots
+
+### Home Dashboard
+Executive summary with KPIs, revenue totals, and channel comparison.
+
+### Visual Analytics
+Interactive charts showing revenue trends, category performance, and geographic insights.
+
+### Market Basket Analysis
+Association rules table with support, confidence, lift metrics and network graphs.
+
+### Clustering
+K-Means elbow plot, cluster distributions, and PCA visualizations.
+
+---
+
+## 🧪 Testing
+
+### Run Tests
+```bash
+# Activate virtual environment
+source venv/bin/activate
+
+# Run all tests
+pytest tests/ -v
+
+# Run with coverage
+pytest tests/ --cov=app --cov-report=html
+
+# View coverage report
+open htmlcov/index.html
+```
+
+### Test Coverage
+- ✅ ETL pipeline (85%+ coverage)
+- ✅ Data cleaning functions
+- ✅ Feature engineering
+- ✅ Edge cases and error handling
+
+---
+
 
 ## 📧 Contact
 
@@ -321,28 +412,18 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Project Link:** [https://github.com/Parvptl/nexus-dashboard](https://github.com/Parvptl/nexus-dashboard)
 
+**Live Demo:** [https://ecommerce-analytics-nexus.streamlit.app/](https://ecommerce-analytics-nexus.streamlit.app/)
+
 ---
 
 ## 🙏 Acknowledgments
 
-- Built with [Streamlit](https://streamlit.io/)
-- Visualization powered by [Plotly](https://plotly.com/)
-- Association rules using [MLxtend](http://rasbt.github.io/mlxtend/)
-- Statistical analysis with [SciPy](https://scipy.org/)
-- Network graphs by [PyVis](https://pyvis.readthedocs.io/)
-
----
-
-## 🔮 Future Enhancements
-
-- [ ] Real-time data streaming support
-- [ ] Advanced forecasting models (ARIMA, Prophet)
-- [ ] Recommendation system integration
-- [ ] A/B testing framework
-- [ ] Docker containerization
-- [ ] PostgreSQL database backend
-- [ ] RESTful API for external integrations
-- [ ] Mobile-responsive design improvements
+- [Streamlit](https://streamlit.io/) - Web framework
+- [Plotly](https://plotly.com/) - Visualizations
+- [MLxtend](http://rasbt.github.io/mlxtend/) - Association rules
+- [SciPy](https://scipy.org/) - Statistical analysis
+- [PyVis](https://pyvis.readthedocs.io/) - Network graphs
+- [Scikit-learn](https://scikit-learn.org/) - Machine learning
 
 ---
 
