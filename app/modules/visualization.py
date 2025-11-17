@@ -7,7 +7,7 @@ import plotly.express as px
 SAMPLE_SEED = 42
 
 def show_visualization_dashboard(df: pd.DataFrame):
-    st.markdown("## 📈 Visual Analytics (Improved)")
+    st.markdown("## 📈 Visual Analytics")
     if df is None or df.empty:
         st.warning("No data to visualize")
         return
